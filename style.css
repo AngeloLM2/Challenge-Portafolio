@@ -1,0 +1,503 @@
+/* Este repositório base fué creado para ayudarte en caso que no sepas como comenzar, recuerda que el portafolio es tu carta de presentación y debes darle tu cara, por eso te invitamos a personalizarlo según tu estilo y preferencias no te limites apenas al layout propuesto en figma  
+*/
+:root {
+    --color-de-fondo: #F5F5F5;
+    --color-de-fondo-menu: #ffffff;
+    --color-de-link: #000000;
+}
+
+body {
+    background-color: var(--color-de-fondo);
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.6;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+.cabecera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--color-de-fondo-menu);
+}
+
+.cabecera__logo {
+    max-width: 80px; /* Ajuste para pantallas pequeñas */
+}
+
+.cabecera__titulo {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.navegacion__lista {
+    display: none;
+}
+
+.navegacion__elemento a {
+    font-size: 0.9rem;
+}
+/* ------------------------------ Sección Presentación ------------------------------ */
+.presentacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+}
+
+.presentacion__foto {
+    max-width: 200px; /* Tamaño reducido de la imagen */
+    height: auto;
+    border-radius: 50%; /* Opcional: Redondear la imagen para estilo */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro de su contenedor */
+}
+
+.presentacion__contenedor {
+    flex: 1; /* Ocupa el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.presentacion__titulo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.presentacion__subtitulo {
+    font-size: 1rem;
+    color: #555; /* Color para diferenciar del título */
+    margin: 0;
+}
+
+.redes {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.redes__img a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-de-link);
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .presentacion {
+        flex-direction: column;
+        text-align: center; /* Centrar contenido para pantallas pequeñas */
+    }
+
+    .presentacion__contenedor {
+        align-items: center;
+    }
+
+    .redes {
+        justify-content: center;
+    }
+
+    .presentacion__foto {
+        max-width: 150px; /* Ajuste adicional para pantallas pequeñas */
+    }
+}
+
+
+/* ------------------------------ Sección sobre mí ---------------------------------- */
+.sobre-mi {
+    background-color: #D9F2FF; /* Fondo celeste pastel */
+    width: 100%; /* Ocupa todo el ancho de la plataforma */
+    padding: 2rem 0; /* Espaciado interno arriba y abajo */
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-mi__contenedor {
+    width: 50%; /* Texto ocupa la mitad derecha de la plataforma */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.sobre-mi__titulo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333; /* Color del texto para mayor contraste */
+}
+
+.sobre-mi__texto {
+    font-size: 1rem;
+    color: #555; /* Texto gris suave */
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+    margin-bottom: 1rem;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .sobre-mi__contenedor {
+        width: 90%; /* Aumenta el ancho del contenedor en pantallas pequeñas */
+        text-align: center; /* Centra el texto */
+    }
+
+    .sobre-mi__titulo,
+    .sobre-mi__texto {
+        text-align: center; /* Ajusta la alineación del texto */
+    }
+}
+
+
+/*------------------------------ Sección de Habilidades ------------------------------*/
+.habilidades {
+    text-align: center; /* Centra todo el contenido dentro de la sección */
+    margin-bottom: 2rem; /* Espaciado inferior */
+}
+
+.habilidades__titulo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2rem; /* Espaciado entre el título y las imágenes */
+}
+
+.habilidades__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las imágenes */
+    gap: 1.5rem;
+}
+
+.habilidades__elemento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%; /* Ajuste de ancho para que entren 3 elementos por fila */
+    text-align: center;
+}
+
+.habilidades__icono {
+    width: 60px; /* Tamaño uniforme para los íconos */
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.habilidades__nombre {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .habilidades__elemento {
+        width: 45%;
+    }
+
+    .habilidades__icono {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .habilidades__elemento {
+        width: 90%;
+    }
+}
+
+/* ------------------------------ Sección de Aficiones ------------------------------ */
+.aficiones {
+    text-align: center; /* Centra todo el contenido dentro de la sección */
+    margin-bottom: 2rem; /* Espaciado inferior */
+}
+
+.aficiones__titulo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2rem; /* Espaciado entre el título y las imágenes */
+}
+
+.aficiones__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las imágenes */
+    gap: 1.5rem;
+}
+
+.aficiones__elemento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%; /* Ajuste de ancho para que entren 3 elementos por fila */
+    text-align: center;
+}
+
+.aficiones__icono {
+    width: 60px; /* Tamaño uniforme para los íconos */
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.aficiones__nombre {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .aficiones__elemento {
+        width: 45%; /* En pantallas más pequeñas, ocupan más espacio */
+    }
+
+    .aficiones__icono {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .aficiones__elemento {
+        width: 90%; /* En pantallas muy pequeñas, ocupan casi todo el ancho */
+    }
+}
+
+/*------------------------------ Sección Formación académica --------------------------------*/ 
+.formacion {
+    background-color: #E0F7FA; /* Fondo celeste pastel */
+    padding: 2rem 0; /* Espaciado superior e inferior */
+}
+
+.formacion__titulo {
+    text-align: center; /* Centra el título "Formación Académica" */
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem; /* Espaciado inferior del título */
+}
+
+.formacion__lista {
+    display: flex;
+    justify-content: space-between; /* Espaciado uniforme entre los elementos */
+    padding: 0;
+    width: 90%; /* Ocupa el 90% del ancho del contenedor */
+    margin: 0 auto; /* Centra la lista en la página */
+}
+
+.formacion__elemento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48%; /* Cada elemento ocupa el 48% del ancho del contenedor */
+}
+
+.formacion__icono {
+    width: 80px; /* Tamaño uniforme para las imágenes */
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1rem; /* Espaciado inferior entre la imagen y el texto */
+}
+
+.formacion__nombre {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem; /* Espaciado superior */
+}
+
+.formacion__detalle {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .formacion__lista {
+        flex-direction: column; /* Los elementos se apilan verticalmente en pantallas pequeñas */
+    }
+
+    .formacion__elemento {
+        width: 100%; /* Cada elemento ocupa el 100% del ancho en pantallas pequeñas */
+        margin-bottom: 1.5rem; /* Espaciado inferior entre los elementos */
+    }
+
+    .formacion__icono {
+        width: 60px; /* Ajusta el tamaño de las imágenes para pantallas más pequeñas */
+        height: 60px;
+    }
+}
+
+/*------------------------------ Sección de Proyectos --------------------------------*/    
+.proyectos {
+    padding: 2rem 0; /* Espaciado superior e inferior */
+}
+
+.proyectos__titulo {
+    text-align: center; /* Centra el título "Experiencia Profesional" */
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem; /* Espaciado inferior del título */
+}
+
+.proyectos__contenedor {
+    margin-left: 2rem; /* Espaciado con el borde izquierdo */
+    margin-right: 2rem; /* Espaciado con el borde derecho */
+    margin-bottom: 2rem; /* Espaciado inferior entre los proyectos */
+}
+
+.proyectos__nombre, .proyectos__descripcion {
+    margin-left: 2rem; /* Espaciado con el borde izquierdo */
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .proyectos__contenedor {
+        margin-left: 1rem; /* Reducir espaciado en pantallas pequeñas */
+        margin-right: 1rem; /* Reducir espaciado en pantallas pequeñas */
+    }
+
+    .proyectos__nombre, .proyectos__descripcion {
+        margin-left: 1rem; /* Reducir espaciado en pantallas pequeñas */
+    }
+}
+
+
+/*------------------------------ Sección de Contacto ---------------------------------*/
+.contacto {
+    background-color: #E0F7FA; /* Fondo celeste pastel */
+    padding: 2rem 0; /* Espaciado superior e inferior */
+    color: #000000; /* Color de texto blanco */
+}
+
+.contacto__titulo {
+    text-align: center; /* Centra el título "Contacto" */
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem; /* Espaciado inferior del título */
+}
+
+.contacto__formulario {
+    display: flex;
+    flex-direction: column; /* Organiza los campos de formulario en columna */
+    align-items: center;
+    width: 80%; /* Ocupa el 80% del ancho del contenedor */
+    margin: 0 auto; /* Centra el formulario */
+}
+
+.contacto__campo {
+    width: 100%; /* Campos ocupan todo el ancho del contenedor */
+    padding: 0.8rem;
+    margin-bottom: 1rem; /* Espaciado entre los campos */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contacto__campo--textarea {
+    height: 200px; /* Aumenta la altura del campo mensaje */
+}
+
+.contacto__boton {
+    background-color: #1E88E5; /* Fondo azul llamativo */
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contacto__boton:hover {
+    background-color: #1565C0; /* Cambia el color al pasar el ratón */
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .contacto__formulario {
+        width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+        padding: 0 1rem; /* Espaciado lateral */
+    }
+
+    .contacto__campo, .contacto__campo--textarea {
+        padding: 1rem;
+    }
+
+    .contacto__boton {
+        width: 100%; /* El botón ocupa todo el ancho en pantallas pequeñas */
+    }
+}
+
+/* ------------------------------ Responsividad ---------------------------------------*/
+
+/* Tablets y pantallas más grandes */
+@media (min-width: 768px) {
+    .cabecera {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cabecera__logo {
+        max-width: 100px;
+    }
+
+    .cabecera__titulo {
+        font-size: 1.5rem;
+    }
+
+    .navegacion__lista {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1rem;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
+    .cabecera__titulo {
+        font-size: 1.8rem;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1.1rem;
+    }
+}
+
+/* Estilo para el texto emergente */
+textarea[placeholder="Mensaje"] {
+    position: relative;  /* Necesario para posicionar el texto emergente dentro del recuadro */
+}
+
+.contacto__formulario div {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.9rem;
+    color: #555;
+    display: none; /* Ocultarlo inicialmente */
+}
